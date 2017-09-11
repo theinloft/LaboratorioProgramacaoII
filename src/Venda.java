@@ -10,7 +10,6 @@ public class Venda {
 	
 	/*
 	 * Criar um método:
-	 * 
 	 * -Metodo de venda do produto
 	 * quantidade * preço
 	 * 

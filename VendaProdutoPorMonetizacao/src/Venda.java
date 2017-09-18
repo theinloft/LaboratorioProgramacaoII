@@ -4,8 +4,8 @@ public class Venda {
 	private int codigo;
 	private LocalDateTime hora;
 	private LocalDateTime data;
-	private Cliente cliente;
-	private Produto produto;
+	private Cliente[] cliente;
+	private Produto[] produto;
 	
 	
 	/*
@@ -17,7 +17,10 @@ public class Venda {
 	 * 
 	 */
 	
-	
+	public void realizaVenda(){
+		
+		
+	}
 	
 	
 	

@@ -2,11 +2,12 @@
 public class Conta {
 	private int numero;
 	private double saldo;
+	private Cliente cliente;
 	
 	
-	public Conta(int numero, double saldo) {
+	public Conta(double saldo) {
 	
-		this.numero = numero;
+		this.numero = (int) (Math.random() * 101);
 		this.saldo = saldo;
 	}
 

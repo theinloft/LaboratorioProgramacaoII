@@ -2,10 +2,13 @@ import java.util.*;
 
 
 public class Menu {
-	private int opcao;
+	
+	private Conta[] conta;
+	private Cliente[] cliente;
+	private Produto[] produto;
 	
 	public Menu(){
-		this.opcao = 0;
+		
 	}
 	
 	
@@ -21,13 +24,17 @@ public class Menu {
 			System.out.println("**********Bem vindo!**********");
 			System.out.println("Selecione uma opção:");
 			System.out.println("1-Cliente");
-			System.out.println("2 - Vendedor");
+			System.out.println("2 - Lojista");
+			System.out.println("------------------------------");
 			 opcaoDesejada = s.nextInt();
 		 
-		}while(opcaoDesejada <=0 && opcaoDesejada >=2);
+		}while(opcaoDesejada <=0 && opcaoDesejada >=3);
 		
 		if(opcaoDesejada ==1){
-			menuCliente();
+			menuCliente(opcaoDesejada);
+		}
+		if(opcaoDesejada == 2){
+			menuLojista();
 		}
 		
 		
@@ -35,23 +42,53 @@ public class Menu {
 	
 	
 	
-	public void menuCliente(){
+	private void menuLojista() {
 		
+		
+	}
+
+
+
+	public void menuCliente(int opcao){
+		int opcaoSubmenu;
 		do{
 		
-		System.out.print("------------------------");
+		System.out.println("------------------------");
 		System.out.println("Escolha uma opção:");
 		
 		System.out.println("1 - Já é nosso cliente");
 		System.out.println("2 - Deseja efetuar seu cadastro");
 		System.out.println("0 - Voltar para menu principal");
-		System.out.print("------------------------");
-		int opcao = s.nextInt(); 
+		System.out.println("------------------------");
+		opcaoSubmenu = s.nextInt(); 
 		
-		}while(opcao<0 && opcao>=2);
+		}while(opcaoSubmenu<0 && opcaoSubmenu>=3);
 		
-		if(opcao == 1){
+		if(opcaoSubmenu == 1){
+			//buscar cliente existente para fazer operação de compra,deposito,etc...
+			System.out.println("");
 			
+		}
+		if(opcaoSubmenu == 2){
+			System.out.println("**********Cadastro**********");
+			System.out.println("Digite seu nome:");
+			String nome = s.nextLine();
+			System.out.println("Digite seu CPF:");
+			String cpf = s.nextLine();
+			System.out.println("Digite seu E-mail:");
+			String email = s.nextLine();
+			
+			double saldo = 0.00;
+			Conta novaConta = new Conta(saldo);
+			
+			
+			
+			
+			Cliente novoCliente = new Cliente(nome,cpf,email);
+			
+			for(int i=1;i<=cliente.length;i++){
+				cliente[i] = novoCliente;
+			}
 		}
 		
 		

@@ -5,7 +5,7 @@ public class VendaProdutoPorMonetizacaoApp {
 		
 		Menu menu = new Menu();
 		Scanner s = new Scanner(System.in);
-		int opcao = 0;
+		
 		
 		/*
 		 * Menu inicial
@@ -14,6 +14,7 @@ public class VendaProdutoPorMonetizacaoApp {
 		 * 
 		 */
 		
+		int opcao = 0;
 		menu.menuInicial(opcao);
 		opcao = s.nextInt();
 		

@@ -1,3 +1,4 @@
+package model;
 
 public class Produto {
 	private int codigoProduto;
@@ -5,9 +6,9 @@ public class Produto {
 	private double preco;
 	
 	
-	public Produto(int codigoProduto, String nome, double preco) {
+	public Produto(String nome, double preco) {
 	
-		this.codigoProduto = codigoProduto;
+		this.codigoProduto++;
 		this.nome = nome;
 		this.preco = preco;
 	}
